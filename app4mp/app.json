@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/index/search/search",
+    "pages/buy/buy",
+    "pages/sell/sell",
+    "pages/post/post",
+    "pages/member/member"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "针织余料交易平台",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/index_actived.png",
+        "iconPath": "images/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/sell_actived.png",
+        "iconPath": "images/sell.png",
+        "pagePath": "pages/sell/sell",
+        "text": "余料录入"
+      },
+      {
+        "selectedIconPath": "images/member_actived.png",
+        "iconPath": "images/member.png",
+        "pagePath": "pages/member/member",
+        "text": "会员"
+      }
+    ]
+  } 
+}

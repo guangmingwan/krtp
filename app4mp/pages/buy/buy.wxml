@@ -1,0 +1,13 @@
+<!--buy.wxml-->
+<view class="title">
+      <text>{{title}}</text>  
+  </view>
+<view class="container">
+  
+  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> 原料需求 </button>
+
+  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> 余胚需求 </button>
+  
+</view>
