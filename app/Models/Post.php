@@ -127,6 +127,9 @@ class Post extends Model
 
     public $table = 'posts';
     
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
+
 
     protected $dates = ['deleted_at'];
 
@@ -150,7 +153,8 @@ class Post extends Model
         'price',
         'face_pic',
         'back_pic',
-        'notes'
+        'notes',
+        'deleted_at'
     ];
 
     /**
@@ -178,7 +182,8 @@ class Post extends Model
         'price' => 'integer',
         'face_pic' => 'string',
         'back_pic' => 'string',
-        'notes' => 'string'
+        'notes' => 'string',
+        'deleted_at' => 'datetime'
     ];
 
     /**

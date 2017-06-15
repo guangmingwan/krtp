@@ -19,6 +19,9 @@
         <th>Face Pic</th>
         <th>Back Pic</th>
         <th>Notes</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+        <th>Deleted At</th>
         <th colspan="3">Action</th>
     </thead>
     <tbody>
@@ -43,6 +46,9 @@
             <td>{!! $post->face_pic !!}</td>
             <td>{!! $post->back_pic !!}</td>
             <td>{!! $post->notes !!}</td>
+            <td>{!! $post->created_at !!}</td>
+            <td>{!! $post->updated_at !!}</td>
+            <td>{!! $post->deleted_at !!}</td>
             <td>
                 {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

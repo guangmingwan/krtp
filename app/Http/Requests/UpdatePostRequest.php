@@ -2,8 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\Request;
 use App\Models\Post;
-use Illuminate\Http\Request;
+
 class UpdatePostRequest extends Request
 {
 

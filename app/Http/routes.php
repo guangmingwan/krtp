@@ -1,27 +1,4 @@
 Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
-Route::resource('posts', 'PostController');
-
 Route::get('login', 'Auth\AuthController@getLogin');
 Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@logout');
@@ -37,3 +14,5 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('posts', 'PostController');
