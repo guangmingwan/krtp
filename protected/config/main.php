@@ -10,9 +10,9 @@
 //Yii::setPathOfAlias('bootstrap', dirname(__FILE__) . '/../../vendor/crisu83/yiistrap/');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Yii Blog Demo',
-
-	// preloading 'log' component
+	'name'=>'针织余料交易平台',
+    'language'=>'zh_cn',
+    // preloading 'log' component
 	'preload'=>array('log'),
 
     // path aliases

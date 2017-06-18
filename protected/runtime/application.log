@@ -4002,3 +4002,40 @@ Stack trace:
 #33 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
 #34 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
 REQUEST_URI=/index.php/post/index
+2017/06/19 00:58:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您未被授权执行这个动作' in /Users/adouming/Desktop/myprojects/krtp/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '\xE6\x82\xA8\xE6\x9C\xAA\xE8\xA2\xAB\xE6\x8E\x88\xE6\x9D\x83...')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('getcount')
+#8 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/getcount')
+#9 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/post/getcount
+---
+2017/06/19 00:59:16 [error] [exception.CException] exception 'CException' with message 'Post and its behaviors do not have a method or closure named "all".' in /Users/adouming/Desktop/myprojects/krtp/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/db/ar/CActiveRecord.php(229): CComponent->__call('all', Array)
+#1 /Users/adouming/Desktop/myprojects/krtp/protected/controllers/PostController.php(59): CActiveRecord->__call('all', Array)
+#2 /Users/adouming/Desktop/myprojects/krtp/protected/controllers/PostController.php(59): Post->all()
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/web/actions/CInlineAction.php(49): PostController->actionGetCount()
+#4 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('getcount')
+#13 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/getcount')
+#14 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/post/getcount
+---

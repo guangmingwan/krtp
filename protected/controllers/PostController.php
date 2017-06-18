@@ -28,7 +28,7 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','getcount'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -55,7 +55,9 @@ class PostController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-
+    public function actionGetCount() {
+	    echo json_encode( array("code"=>200,"count" => Post::model()->find()->count()));
+    }
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
