@@ -4039,3 +4039,29 @@ Stack trace:
 #16 {main}
 REQUEST_URI=/index.php/post/getcount
 ---
+2017/06/19 02:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "api_posts" 动作.' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('api_posts')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('api_posts')
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/api_posts')
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/api_posts
+---
+2017/06/19 02:09:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message '您未被授权执行这个动作' in /Users/adouming/Desktop/myprojects/krtp/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '\xE6\x82\xA8\xE6\x9C\xAA\xE8\xA2\xAB\xE6\x8E\x88\xE6\x9D\x83...')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/adouming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('api_posts')
+#8 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/api_posts')
+#9 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/post/api_posts
+---

@@ -1,6 +1,6 @@
 //index.js
 var functions = require('../functions.js')
-var url = 'https://api.douban.com/v2/movie/in_theaters'
+var url = 'http://127.0.0.1:8888/index.php/post/api_posts'
 var pageSize = 20
 Page({
   data: {
@@ -39,13 +39,13 @@ Page({
         this.setData({
           showLoading: false
         })
-    // functions.getCity(function (city) {
-    //   functions.fetchFilms.call(that, url, city, 0, pageSize, function (data) {
-    //     that.setData({
-    //       showLoading: false
-    //     })
-    //   })
-    // })
+    
+      functions.fetchFilms.call(that, url,  0, pageSize, function (data) {
+        that.setData({
+          showLoading: false
+        })
+      })
+    
   },
   scrolltolower: function () {
     var that = this

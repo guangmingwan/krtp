@@ -29,10 +29,10 @@ module.exports = {
       cb(location.addressComponent.city.replace('市', ''))
     })
   },
-  fetchFilms: function (url, city, start, count, cb) {
+  fetchFilms: function (url, start, count, cb) {
     var that = this
     wx.request({
-      url: url + '?city=' + city + '&start=' + start + '&count=' + count,
+      url: url + '?start=' + start + '&count=' + count,
       header: {
         "Content-Type": "json",
       },

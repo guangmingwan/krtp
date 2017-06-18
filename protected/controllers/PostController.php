@@ -28,7 +28,7 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','getcount'),
+				'actions'=>array('index','view','getcount','api_posts'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -129,7 +129,13 @@ class PostController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
-
+    public function actionApi_posts() {
+        $criteria = null;
+        $posts = Post::model()->findAll();
+        //var_dump($posts);
+        $result = array("subjects"=>$posts);
+        echo CJSON::encode($result);
+    }
 	/**
 	 * Manages all models.
 	 */
