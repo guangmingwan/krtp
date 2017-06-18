@@ -1,15 +1,10 @@
 //index.js
 var functions = require('../functions.js')
-var url = 'http://127.0.0.1:8888/index.php/post/api_posts'
+var url = 'https://www.17tex.com/krtp/index.php/post/api_posts'
 var pageSize = 20
 Page({
   data: {
-    films: [{"title":"新誉丰织厂","year":"2017", "images": { "medium": "/images/logo.png" }, "rating": { "average": 78 }, "directors": "AAA", "notes": "BBB" },
-      { "title": "新誉丰织厂", "year": "2017","images": { "medium": "/images/logo.png" }, "rating": { "average": 78 }, "directors": "AAA", "notes": "BBB" },
-      { "title": "新誉丰织厂", "year": "2017","images": { "medium": "/images/logo.png" }, "rating": { "average": 78 }, "directors": "AAA", "notes": "BBB" },
-      { "title": "新誉丰织厂", "year": "2017","images": { "medium": "/images/logo.png" }, "rating": { "average": 78 }, "directors": "AAA", "notes": "BBB" },
-      { "title": "新誉丰织厂", "year": "2017","images": { "medium": "/images/logo.png" }, "rating": { "average": 78 }, "directors": "AAA", "notes": "BBB" },
-      { "title": "新誉丰织厂", "year": "2017","images": { "medium": "/images/logo.png" }, "rating": { "average": 78 }, "directors": "AAA", "notes": "BBB" },
+    films: [{"title":"新誉丰织厂","year":"2017", "images": { "medium": "/images/logo.png" }, "rating": { "average": 78 }, "directors": "AAA", "notes": "BBB" }
     ],
     hasMore: true,
     showLoading: true,
