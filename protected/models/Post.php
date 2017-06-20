@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "{{posts}}".
+ * This is the model class for table "{{post}}".
  *
- * The followings are the available columns in table '{{posts}}':
+ * The followings are the available columns in table '{{post}}':
  * @property string $id
  * @property integer $supplier_sn
  * @property string $supplier_name
@@ -48,12 +48,12 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('supplier_sn, class, percent, width, goods_weight, pi_number, pi_weight, weight, price, notes', 'required'),
+			array('supplier_sn', 'required'),
 			array('supplier_sn, class, percent, width, goods_weight, pi_number, pi_weight, weight, price', 'numerical', 'integerOnly'=>true),
 			array('supplier_name, color, name, library, zhen_number, inch_number, total_zhen_number, face_pic, back_pic', 'length', 'max'=>255),
 			array('linkman', 'length', 'max'=>50),
 			array('linktel', 'length', 'max'=>20),
-			array('created_at, updated_at, deleted_at', 'safe'),
+			array('notes, created_at, updated_at, deleted_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, supplier_sn, supplier_name, linkman, linktel, color, class, name, library, percent, zhen_number, inch_number, total_zhen_number, width, goods_weight, pi_number, pi_weight, weight, price, face_pic, back_pic, notes, created_at, updated_at, deleted_at', 'safe', 'on'=>'search'),
@@ -158,7 +158,7 @@ class Post extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Posts the static model class
+	 * @return Post the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
