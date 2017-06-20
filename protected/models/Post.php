@@ -82,7 +82,7 @@ class Post extends CActiveRecord
 			'supplier_name' => '供应商名称',
 			'linkman' => '联系人姓名',
 			'linktel' => '联系人电话',
-			'color' => '坯布颜色',
+			'color' => '颜色',
 			'class' => '布类分类',
 			'name' => '布类名称',
 			'library' => '用纱资料',
