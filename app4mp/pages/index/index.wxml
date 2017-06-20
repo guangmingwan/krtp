@@ -20,25 +20,29 @@
     <block wx:for-items="{{films}}" wx:for-item="film">
       <view class="film-item" bindtap="viewDetail" data-id="{{film.id}}" data-title="{{film.title}}">
         <view class="film-image">
-          <image src="{{film.images.medium}}"></image>
+          <image src="{{film.face_pic}}"></image>
         </view>
         <view class="film-info">
           <view>
-            <text class="film-title">{{film.title}}</text>
-            <text class="film-year">{{film.year}}</text>
+            <text class="film-title">{{film.name}}</text>
+            <text class="film-year">{{film.color}}</text>
           </view>
           <view class="film-rating">
-            <block wx:if="{{film.rating.average > 0}}">
+            <block wx:if="{{film.price > 0}}">
               <text class="label">价格</text>
-              <text class="rating">{{film.rating.average}}</text>
+              <text class="rating">{{film.price}}</text>
             </block>
             <block wx:else>
               <text class="label">暂无报价</text>
             </block>
           </view>
           <view class="directors">
+            <text class="label">卖方</text>
+            <text class="person">{{film.supplier_name}}</text>
+          </view>
+          <view class="directors">
             <text class="label">牌子／产地</text>
-            <text class="person">{{film.directors}}</text>
+            <text class="person">{{film.supplier_name}}</text>
           </view>
           <view class="casts">
             <text class="label">备注</text>

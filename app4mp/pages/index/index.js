@@ -4,8 +4,7 @@ var url = 'https://www.17tex.com/krtp/index.php/post/api_posts'
 var pageSize = 20
 Page({
   data: {
-    films: [{"title":"新誉丰织厂","year":"2017", "images": { "medium": "/images/logo.png" }, "rating": { "average": 78 }, "directors": "AAA", "notes": "BBB" }
-    ],
+    films: [],
     hasMore: true,
     showLoading: true,
     start: 0,
