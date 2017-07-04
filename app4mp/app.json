@@ -6,7 +6,9 @@
     "pages/buy/buy",
     "pages/sell/sell",
     "pages/post/post",
-    "pages/member/member"
+    "pages/member/member",
+    "pages/member/profile",
+    "pages/member/about"
   ],
   "window":{
     "backgroundTextStyle":"light",

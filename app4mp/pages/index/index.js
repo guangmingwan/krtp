@@ -1,10 +1,13 @@
 //index.js
 var functions = require('../functions.js')
-var url = 'https://www.17tex.com/krtp/index.php/post/api_posts'
-var pageSize = 20
+//var url = 'https://www.17tex.com/krtp/index.php/post/api_posts'
+var app = getApp();
+var url = app.globalData.rooturl+'/post/api_posts'
+var pageSize = 5
 Page({
   data: {
     films: [],
+    postcount: 0,
     hasMore: true,
     showLoading: true,
     start: 0,
@@ -30,15 +33,21 @@ Page({
   },
   onLoad: function () {
     var that = this
-        this.setData({
-          showLoading: false
+        // this.setData({
+        //   showLoading: false
+        // })
+    var api_url = app.globalData.rooturl + '/post/api_posts_count';
+        functions.getPostCount.call(that, api_url, function (data) {
+          that.setData({
+            showLoading: false
+          })
         })
-    
       functions.fetchFilms.call(that, url,  0, pageSize, function (data) {
         that.setData({
           showLoading: false
         })
       })
+      
     
   },
   scrolltolower: function () {
