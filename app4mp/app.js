@@ -38,8 +38,27 @@ App({
 
     }
   },
+  getCompanyInfo: function (cb) {
+    var that = this
+    var app = getApp();
+    var url = app.globalData.rooturl + '/profile/fetch'
+    wx.request({
+      url: url,
+      data: { "openid": that.globalData.userInfo.openid },
+      method: 'get',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        that.globalData.companyInfo = res.data;
+        typeof cb == "function" && cb(that.globalData.companyInfo)
+      }
+    })
+  },
   globalData:{
     userInfo:null,
+    companyInfo:null,
     appid: 'wxa4712ca802cf8f2a',//填写微信小程序appid  
     secret: 'c9cf9130c42c586184b8cd9f2e62caae',//填写微信小程序secret
     rooturl: 'http://127.0.0.1:8888/index.php', 

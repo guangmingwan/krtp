@@ -11,6 +11,7 @@ Page({
     title: '会员',
     sub_title: '用户资料修改：',
     userInfo: {},
+    companyInfo: {},
     toast1Hidden: true,
     modalHidden: true,
     modalHidden2: true,
@@ -33,9 +34,11 @@ Page({
     var formData = this.frm.detail.value;
     var app = getApp();
     var url = app.globalData.rooturl + '/profile/modify'
+    formData.openid = this.data.userInfo.openid;
     wx.request({
       url: url,
       data: formData,
+      method: 'post',
       header: {
         'Content-Type': 'application/json'
       },
@@ -76,7 +79,7 @@ Page({
     })
   }, 
   formSubmit: function (e) {
-    this.frm != null || (this.frm = e);
+    this.frm = e
     if (e.detail.value.company.length == 0 || e.detail.value.username.length == 0 || e.detail.value.tel.length == 0) {
       app.showToast('提示：用户名,姓名，电话都不能为空！', this, 2000);
      
@@ -101,6 +104,12 @@ Page({
       that.setData({
         userInfo: userInfo
       })
+      app.getCompanyInfo(function (companyInfo) {
+        //更新数据
+        that.setData({
+          companyInfo: companyInfo
+        })
+      }) 
     }) 
   },
 

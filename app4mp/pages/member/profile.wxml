@@ -8,19 +8,19 @@
          <view class="section">  
             <view class="section__title">公司名称:</view>  
             <view class='form-group'>  
-                <input type="text" class="inpupt_withbottomline" name="company" placeholder="请输入公司名称" />  
+                <input type="text" class="inpupt_withbottomline" name="company" value="{{companyInfo.company}}" placeholder="请输入公司名称" />  
             </view>      
         </view>  
         <view class="section">  
             <view class="section__title">姓名:</view>  
             <view class='form-group'>  
-                <input type="text" class="inpupt_withbottomline" name="username" placeholder="请输入姓名" />  
+                <input type="text" class="inpupt_withbottomline" name="username" value="{{companyInfo.username}}" placeholder="请输入姓名" />  
             </view>      
         </view> 
         <view class="section">  
             <view class="section__title">电话:</view>  
             <view class='form-group'>  
-                <input type="text" class="inpupt_withbottomline" name="tel" placeholder="请输入移动电话或者座机" />  
+                <input type="text" class="inpupt_withbottomline" name="tel" value="{{companyInfo.tel}}" placeholder="请输入移动电话或者座机" />  
             </view>      
         </view> 
         

@@ -4065,3 +4065,169 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/index.php/post/api_posts
 ---
+2017/06/24 12:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "count" 动作.' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('count')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('count')
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/count')
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/count
+---
+2017/06/24 12:04:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "count" 动作.' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('count')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('count')
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/count')
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/count
+---
+2017/07/05 00:16:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?username=
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 00:16:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?username=
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 00:17:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?username=
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 00:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?username=
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 00:27:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?username=
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 00:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?username=
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 00:28:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?username=
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 00:30:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?username=
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 23:53:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?company=www&username=www&tel=www
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 23:53:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?company=www&username=www&tel=www
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 23:54:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?company=ww&username=ww&tel=ww
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/05 23:54:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "profile/modify"。' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/modify')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/profile/modify?company=ww&username=ww1&tel=ww
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/06 00:06:44 [error] [php] Undefined index: company (/Users/adouming/Desktop/myprojects/krtp/protected/controllers/ProfileController.php:12)
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(286): ProfileController->runAction()
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(265): ProfileController->runActionWithFilters()
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): ProfileController->run()
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/profile/modify
+2017/07/06 00:06:44 [error] [php] Undefined index: company (/Users/adouming/Desktop/myprojects/krtp/protected/controllers/ProfileController.php:12)
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(286): ProfileController->runAction()
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(265): ProfileController->runActionWithFilters()
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): ProfileController->run()
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/profile/modify
+2017/07/06 00:07:15 [error] [php] Undefined index: company (/Users/adouming/Desktop/myprojects/krtp/protected/controllers/ProfileController.php:12)
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(286): ProfileController->runAction()
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(265): ProfileController->runActionWithFilters()
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): ProfileController->run()
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/profile/modify
+2017/07/06 00:27:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "fetch" 动作.' in /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/adouming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('fetch')
+#1 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('fetch')
+#2 /Users/adouming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('profile/fetch')
+#3 /Users/adouming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/adouming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/profile/fetch?openid=orHwM0RxkpLbxTR8uzOqOY78IsXs
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
