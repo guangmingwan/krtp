@@ -12,10 +12,28 @@ var pageObject = {
     disabled: false,
     plain: false,
     loading: false,
+    toast1Hidden: true,
+    modalHidden: true,
+    modalHidden2: true,
+    notice_str: '',
     postType: 0,
     userInfo: null,
     companyInfo: null,
   },
+  formSubmit: function (e) {
+    this.frm = e
+    if (e.detail.value.company.length == 0 || e.detail.value.username.length == 0 || e.detail.value.tel.length == 0) {
+      app.showToast('提示：用户名,姓名，电话都不能为空！', this, 2000);
+
+    } else {
+      this.modalTap();
+    }
+
+  },
+  formReset: function () {
+    console.log('form发生了reset事件');
+    this.modalTap2();
+  },   
   setDisabled: function (e) {
     this.setData({
       disabled: e

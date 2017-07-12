@@ -3,7 +3,7 @@
       <text>{{sub_title}}</text>  
   </view>
 <view class="container">
-
+<form bindsubmit="formSubmit" bindreset="formReset"> 
 <block wx:if="{{postType == 0}}">
 <view class="film-item">
   <view class="film-image">
@@ -42,7 +42,7 @@
   <text>支数：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入支数" />
+  <input name="zhi_number"  class="inpupt_withbottomline" maxlength="10" placeholder="输入支数" />
   </view>
 </view>
 <view class="film-item">
@@ -50,7 +50,7 @@
   <text>纺法：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入纺法" />
+  <input name="method" class="inpupt_withbottomline" maxlength="10" placeholder="输入纺法" />
   </view>
 </view>
 <view class="film-item">
@@ -58,7 +58,7 @@
   <text>成份：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入成份" />
+  <input name="ingredients" class="inpupt_withbottomline" maxlength="10" placeholder="输入成份" />
   </view>
 </view>
 <view class="film-item">
@@ -66,7 +66,7 @@
   <text>牌子／产地：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入牌子／产地" />
+  <input name="band"  class="inpupt_withbottomline" maxlength="10" placeholder="输入牌子／产地" />
   </view>
 </view>
 <view class="film-item">
@@ -74,7 +74,7 @@
   <text>颜色／色号：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入颜色／色号" />
+  <input name="color" class="inpupt_withbottomline" maxlength="10" placeholder="输入颜色／色号" />
   </view>
 </view>
 <view class="film-item">
@@ -82,7 +82,7 @@
   <text>批号／缸号：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入批号／缸号" />
+  <input name="gan_number" class="inpupt_withbottomline" maxlength="10" placeholder="输入批号／缸号" />
   </view>
 </view>
 <view class="film-item">
@@ -90,15 +90,15 @@
   <text>生产日期：</text>
   </view>
   <view class="film-info">
-  <input class="inpupt_withbottomline"  maxlength="10" placeholder="生产日期" />
+  <input name="manufacture_date" class="inpupt_withbottomline"  maxlength="10" placeholder="生产日期" />
   </view>
 </view>
 <view class="film-item">
   <view class="film-image">
-  <text>库存件数量：</text>
+  <text>库存件数：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="箱／袋" />
+  <input name="jian_number" class="inpupt_withbottomline" maxlength="10" placeholder="箱／袋" />
   </view>
 </view>
 <view class="film-item">
@@ -106,7 +106,7 @@
   <text>库存数量：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="公斤" />
+  <input name="weight" class="inpupt_withbottomline" maxlength="10" placeholder="公斤" />
   </view>
 </view>
 <view class="film-item">
@@ -114,7 +114,7 @@
   <text>销售单价：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="元／公斤（不含税）" />
+  <input name="price" class="inpupt_withbottomline" maxlength="10" placeholder="元／公斤（不含税）" />
   </view>
 </view>
 <view class="film-item">
@@ -122,15 +122,10 @@
   <text>备注：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入备注" />
+  <input name="notes" class="inpupt_withbottomline" maxlength="10" placeholder="输入备注" />
   </view>
 </view>
-<view class="film-item">
-  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="search" hover-class="other-button-hover"><icon type="search" size="15"/> 确定 </button>
-        <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="reset" hover-class="other-button-hover"><icon type="cancel" size="15"/> 取消|清除条件 </button>
-  </view>
+
 </block>
 <block wx:else>
 
@@ -139,7 +134,7 @@
   <text>布种：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入布种" />
+  <input name="name"  class="inpupt_withbottomline" maxlength="10" placeholder="输入布种" />
   </view>
 </view>
 <view class="film-item">
@@ -147,7 +142,7 @@
   <text>用纱：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入用纱" />
+  <input name="library"  class="inpupt_withbottomline" maxlength="10" placeholder="输入用纱" />
   </view>
 </view>
 <view class="film-item">
@@ -155,7 +150,7 @@
   <text>针数：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入针数" />
+  <input name="zhen_number"  class="inpupt_withbottomline" maxlength="10" placeholder="输入针数" />
   </view>
 </view>
 <view class="film-item">
@@ -163,7 +158,7 @@
   <text>寸数：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入寸数" />
+  <input name="inch_number" class="inpupt_withbottomline" maxlength="10" placeholder="输入寸数" />
   </view>
 </view>
 <view class="film-item">
@@ -171,7 +166,7 @@
   <text>总针数：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入总针数" />
+  <input name="total_zhen_number" class="inpupt_withbottomline" maxlength="10" placeholder="输入总针数" />
   </view>
 </view>
 <view class="film-item">
@@ -179,7 +174,7 @@
   <text>成品克重：</text>
   </view>
   <view class="film-info">
-  <input class="inpupt_withbottomline"  maxlength="10" placeholder="输入纺法" />
+  <input name="goods_weight" class="inpupt_withbottomline"  maxlength="10" placeholder="输入纺法" />
   </view>
 </view>
 <view class="film-item">
@@ -187,7 +182,7 @@
   <text>库存数量：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入数量（公斤）" />
+  <input name="weight" class="inpupt_withbottomline" maxlength="10" placeholder="输入数量（公斤）" />
   </view>
 </view>
 <view class="film-item">
@@ -195,7 +190,7 @@
   <text>销售单价：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="元／公斤（不含税）" />
+  <input name="price"  class="inpupt_withbottomline" maxlength="10" placeholder="元／公斤（不含税）" />
   </view>
 </view>
 <view class="film-item">
@@ -203,15 +198,30 @@
   <text>备注：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入备注" />
+  <input name="notes"  class="inpupt_withbottomline" maxlength="10" placeholder="输入备注" />
   </view>
 </view>
-<view class="film-item">
-  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="search" hover-class="other-button-hover"><icon type="search" size="15"/> 确定 </button>
-        <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="reset" hover-class="other-button-hover"><icon type="cancel" size="15"/> 取消|清除条件 </button>
-  </view>
-
 </block>
+<view class="film-item">
+  
+            <button loading="{{loading}}" formType="submit">提交</button>  
+            <button formType="reset">清空</button>  
+      
+</view>
+</form>
+ <!-- 黑框提示并消失 -->  
+    <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">  
+        {{notice_str}}  
+    </toast> 
+    
+    <!-- 确认框 及 提示框 -->  
+    <view class="page__bd">  
+        <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
+            确认提交么？  
+        </modal>  
+        <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">  
+            <view> 提示 </view>  
+            <view> 清空成功 </view>  
+        </modal>  
+    </view> 
 </view>
