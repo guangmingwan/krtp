@@ -10,7 +10,7 @@
   <text>供应商编号：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入供应商编号" />
+  <input disabled="true"  class="inpupt_withnobottomline" maxlength="10" placeholder="输入供应商编号" value="{{userInfo.openid}}" />
   </view>
 </view>
 <view class="film-item">
@@ -18,7 +18,7 @@
   <text>供应商名称：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入供应商名称" />
+  <input  disabled="true"  class="inpupt_withnobottomline" maxlength="10" placeholder="输入供应商名称" value="{{companyInfo.company}}" />
   </view>
 </view>
 <view class="film-item">
@@ -26,7 +26,7 @@
   <text>联系人姓名：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入联系人姓名" />
+  <input  disabled="true"  class="inpupt_withnobottomline" maxlength="10" placeholder="输入联系人姓名" value="{{companyInfo.username}}" />
   </view>
 </view>
 <view class="film-item">
@@ -34,7 +34,7 @@
   <text>联系人电话：</text>
   </view>
   <view class="film-info">
-  <input  class="inpupt_withbottomline" maxlength="10" placeholder="输入联系人电话" />
+  <input  disabled="true"  class="inpupt_withnobottomline" maxlength="10" placeholder="输入联系人电话" value="{{companyInfo.tel}}" />
   </view>
 </view>
 <view class="film-item">

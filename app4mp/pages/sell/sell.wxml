@@ -11,3 +11,7 @@
         disabled="{{disabled}}" bindtap="gotoPost"  data-post-type="1"  hover-class="other-button-hover"> 余胚发布 </button>
   
 </view>
+<view>
+  <modal title="提示" hidden="{{modalHidden}}" confirm-text="确定" cancel-text="取消"
+  bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">用户资料不完善，点击确定去完善资料。</modal>
+</view>

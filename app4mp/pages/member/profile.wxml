@@ -25,7 +25,7 @@
         </view> 
         
         <view class="section btn-area">  
-            <button formType="submit">提交</button>  
+            <button loading="{{loading}}" formType="submit">提交</button>  
             <button formType="reset">清空</button>  
         </view>  
     </form>  

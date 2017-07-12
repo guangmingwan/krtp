@@ -12,11 +12,13 @@ var pageObject = {
     disabled: false,
     plain: false,
     loading: false,
-    postType: 0
+    postType: 0,
+    userInfo: null,
+    companyInfo: null,
   },
   setDisabled: function (e) {
     this.setData({
-      disabled: !this.data.disabled
+      disabled: e
     })
   },
   setPlain: function (e) {
@@ -43,6 +45,22 @@ var pageObject = {
     }
     wx.setNavigationBarTitle({
       title: pageObject.data.title
+    })
+    var that = this
+    this.setDisabled(false);
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function (_userInfo) {
+      //更新数据
+      that.setData({
+        userInfo: _userInfo
+      })
+      app.getCompanyInfo(function (_companyInfo) {
+        //更新数据
+        that.setData({
+          companyInfo: _companyInfo
+        })
+        that.setDisabled(false);
+      })
     })
   }
 }

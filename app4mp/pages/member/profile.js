@@ -12,6 +12,7 @@ Page({
     sub_title: '用户资料修改：',
     userInfo: {},
     companyInfo: {},
+    loading: false,
     toast1Hidden: true,
     modalHidden: true,
     modalHidden2: true,
@@ -35,6 +36,10 @@ Page({
     var app = getApp();
     var url = app.globalData.rooturl + '/profile/modify'
     formData.openid = this.data.userInfo.openid;
+    that.setData({
+      modalHidden: true,
+      loading: true
+    }); 
     wx.request({
       url: url,
       data: formData,
@@ -45,6 +50,7 @@ Page({
       success: function (res) {
         console.log(res.data)
         that.setData({
+          loading:false,
           modalHidden: true,
           toast1Hidden: false,
           notice_str: '提交成功'

@@ -122,6 +122,9 @@ page {
 .inpupt_withbottomline {
   border-bottom: 1px solid #e7e7eb;
 }
+.inpupt_withnobottomline {
+  border-bottom: 0px solid #e7e7eb;
+}
 
 .body-view {
   width: 128rpx;
