@@ -20,14 +20,42 @@ var pageObject = {
     userInfo: null,
     companyInfo: null,
   },
+  frm: null,
   formSubmit: function (e) {
     this.frm = e
-    if (e.detail.value.company.length == 0 || e.detail.value.username.length == 0 || e.detail.value.tel.length == 0) {
-      app.showToast('提示：用户名,姓名，电话都不能为空！', this, 2000);
+    this.confirm_one(e);
 
-    } else {
-      this.modalTap();
-    }
+  },
+  confirm_one: function (e) {
+    console.log(e);
+    var that = this;
+    var formData = {};
+    formData.post = this.frm.detail.value;
+    var app = getApp();
+    var url = app.globalData.rooturl + '/post/add?type=' + this.data.postType;
+
+    formData.openid = this.data.userInfo.openid;
+    that.setData({
+      modalHidden: true,
+      loading: true
+    });
+    wx.request({
+      url: url,
+      data: formData,
+      method: 'post',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          loading: false,
+          modalHidden: true,
+          toast1Hidden: false,
+          notice_str: '提交成功'
+        });
+      }
+    })
 
   },
   formReset: function () {

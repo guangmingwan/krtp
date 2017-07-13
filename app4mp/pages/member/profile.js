@@ -87,7 +87,7 @@ Page({
   formSubmit: function (e) {
     this.frm = e
     if (e.detail.value.company.length == 0 || e.detail.value.username.length == 0 || e.detail.value.tel.length == 0) {
-      app.showToast('提示：用户名,姓名，电话都不能为空！', this, 2000);
+      app.showToast('提示：公司名称,联系人，电话都不能为空！', this, 2000);
      
     } else {
       this.modalTap();
