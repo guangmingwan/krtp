@@ -5,15 +5,22 @@
  *
  * The followings are the available columns in table '{{post}}':
  * @property string $id
- * @property integer $supplier_sn
- * @property string $supplier_name
- * @property string $linkman
- * @property string $linktel
+ * @property string $openid
+ * @property string $company
+ * @property string $username
+ * @property string $tel
  * @property string $color
+ * @property string $ingredients
+ * @property string $method
+ * @property string $gan_number
+ * @property string $manufacture_date
+ * @property string $band
+ * @property string $jian_number
  * @property integer $class
  * @property string $name
  * @property string $library
- * @property integer $percent
+ * @property string $percent
+ * @property string $zhi_number
  * @property string $zhen_number
  * @property string $inch_number
  * @property string $total_zhen_number
@@ -48,15 +55,15 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('supplier_sn', 'required'),
-			array('supplier_sn, class, percent, width, goods_weight, pi_number, pi_weight, weight, price', 'numerical', 'integerOnly'=>true),
-			array('supplier_name, color, name, library, zhen_number, inch_number, total_zhen_number, face_pic, back_pic', 'length', 'max'=>255),
-			array('linkman', 'length', 'max'=>50),
-			array('linktel', 'length', 'max'=>20),
+			array('name', 'required'),
+			array('class, width, goods_weight, pi_number, pi_weight, weight, price', 'numerical', 'integerOnly'=>true),
+			array('openid, company, color, ingredients, method, gan_number, manufacture_date, band, jian_number, name, library, zhi_number, zhen_number, inch_number, total_zhen_number, face_pic, back_pic', 'length', 'max'=>255),
+			array('username, percent', 'length', 'max'=>50),
+			array('tel', 'length', 'max'=>20),
 			array('notes, created_at, updated_at, deleted_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, supplier_sn, supplier_name, linkman, linktel, color, class, name, library, percent, zhen_number, inch_number, total_zhen_number, width, goods_weight, pi_number, pi_weight, weight, price, face_pic, back_pic, notes, created_at, updated_at, deleted_at', 'safe', 'on'=>'search'),
+			array('id, openid, company, username, tel, color, ingredients, method, gan_number, manufacture_date, band, jian_number, class, name, library, percent, zhi_number, zhen_number, inch_number, total_zhen_number, width, goods_weight, pi_number, pi_weight, weight, price, face_pic, back_pic, notes, created_at, updated_at, deleted_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,15 +85,22 @@ class Post extends CActiveRecord
 	{
 		return array(
 			'id' => '编号',
-			'supplier_sn' => '供应商编号',
-			'supplier_name' => '供应商名称',
-			'linkman' => '联系人姓名',
-			'linktel' => '联系人电话',
+			'openid' => '供应商编号',
+			'company' => '供应商名称',
+			'username' => '联系人姓名',
+			'tel' => '联系人电话',
 			'color' => '颜色',
+			'ingredients' => '成份',
+			'method' => '纺法',
+			'gan_number' => '批号／缸号',
+			'manufacture_date' => '生产日期',
+			'band' => '牌子／产地',
+			'jian_number' => '库存件数',
 			'class' => '布类分类',
 			'name' => '布类名称',
 			'library' => '用纱资料',
 			'percent' => '比例(%)',
+			'zhi_number' => '支数',
 			'zhen_number' => '针数',
 			'inch_number' => '寸数',
 			'total_zhen_number' => '总针数',
@@ -124,15 +138,22 @@ class Post extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('supplier_sn',$this->supplier_sn);
-		$criteria->compare('supplier_name',$this->supplier_name,true);
-		$criteria->compare('linkman',$this->linkman,true);
-		$criteria->compare('linktel',$this->linktel,true);
+		$criteria->compare('openid',$this->openid,true);
+		$criteria->compare('company',$this->company,true);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('tel',$this->tel,true);
 		$criteria->compare('color',$this->color,true);
+		$criteria->compare('ingredients',$this->ingredients,true);
+		$criteria->compare('method',$this->method,true);
+		$criteria->compare('gan_number',$this->gan_number,true);
+		$criteria->compare('manufacture_date',$this->manufacture_date,true);
+		$criteria->compare('band',$this->band,true);
+		$criteria->compare('jian_number',$this->jian_number,true);
 		$criteria->compare('class',$this->class);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('library',$this->library,true);
-		$criteria->compare('percent',$this->percent);
+		$criteria->compare('percent',$this->percent,true);
+		$criteria->compare('zhi_number',$this->zhi_number,true);
 		$criteria->compare('zhen_number',$this->zhen_number,true);
 		$criteria->compare('inch_number',$this->inch_number,true);
 		$criteria->compare('total_zhen_number',$this->total_zhen_number,true);
