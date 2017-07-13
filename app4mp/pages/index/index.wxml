@@ -9,7 +9,7 @@
 <view class="home-logo-view" >
           <image class="logo-image" src="/images/logo.png"></image>
           <view>
-          <text class="site-tips-label">本系统共收录余料资源<text class="highlight">32789</text>件</text>
+          <text class="site-tips-label">本系统共收录余料资源<text class="highlight">{{postcount}}</text>件</text>
           </view>
 </view> 
 <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"

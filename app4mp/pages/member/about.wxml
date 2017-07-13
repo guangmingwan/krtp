@@ -1,0 +1,6 @@
+<view class="container">
+<image src="/images/logo.png"></image>
+<label>我们是谁？</label>
+<label>我们是广州方龙软件开发有限公司</label>
+<label>版权所有©️2017</label>
+</view>

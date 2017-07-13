@@ -13,18 +13,69 @@ App({
     }else{
       //调用登录接口
       wx.login({
-        success: function () {
+        success: function (loginCode) {
           wx.getUserInfo({
             success: function (res) {
               that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
+              //调用request请求api转换登录凭证  
+              wx.request({
+                url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + that.globalData.appid + '&secret=' + that.globalData.secret + '&grant_type=authorization_code&js_code=' + loginCode.code,
+                header: {
+                  'content-type': 'application/json'
+                },
+                success: function (res) {
+                  console.log(res.data.openid) //获取openid
+                  that.globalData.userInfo.openid = res.data.openid
+                  typeof cb == "function" && cb(that.globalData.userInfo)
+                }
+              })
+              
             }
           })
+          
         }
       })
+
     }
   },
+  getCompanyInfo: function (cb) {
+    var that = this
+    var app = getApp();
+    var url = app.globalData.rooturl + '/profile/fetch'
+    wx.request({
+      url: url,
+      data: { "openid": that.globalData.userInfo.openid },
+      method: 'get',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        that.globalData.companyInfo = res.data;
+        typeof cb == "function" && cb(that.globalData.companyInfo)
+      }
+    })
+  },
   globalData:{
-    userInfo:null
-  }
+    userInfo:null,
+    companyInfo:null,
+    appid: 'wxa4712ca802cf8f2a',//填写微信小程序appid  
+    secret: 'c9cf9130c42c586184b8cd9f2e62caae',//填写微信小程序secret
+    rooturl: 'http://127.0.0.1:8888/index.php', 
+    //rooturl: 'https://www.17tex.com/krtp/index.php',
+  },
+  //自定义Toast   
+  showToast: function(text,o,count){
+         var _this = o;     
+         count = parseInt(count) ? parseInt(count) : 3000;
+              _this.setData({       
+                toastText:text,       
+                isShowToast: true,     
+                });     
+                setTimeout(function () {
+                         _this.setData({
+                                    isShowToast: false       
+                                    });     
+                                    },count);   
+  }, 
 })

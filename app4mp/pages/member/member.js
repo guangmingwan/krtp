@@ -5,7 +5,7 @@ Page({
   data: {
     motto: '会员中心',
     userInfo: {},
-    nodes: [{ "id": 0, "title": "用户资料修改" }, { "id": 1, "title": "关于我们"}],
+    nodes: [{ "id": 0, "title": "用户资料修改", "url": "/pages/member/profile" }, { "id": 1, "title": "关于我们", "url":"/pages/member/about"}],
   },
   //事件处理函数
   bindViewTap: function() {

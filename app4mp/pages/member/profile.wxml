@@ -1,0 +1,51 @@
+<view class="title">
+      <text>{{sub_title}}</text>  
+  </view>
+<view class="container">
+<include src="../common/toast.wxml"/> 
+<view id="adduser">  
+    <form bindsubmit="formSubmit" bindreset="formReset">  
+         <view class="section">  
+            <view class="section__title">公司名称:</view>  
+            <view class='form-group'>  
+                <input type="text" class="inpupt_withbottomline" name="company" value="{{companyInfo.company}}" placeholder="请输入公司名称" />  
+            </view>      
+        </view>  
+        <view class="section">  
+            <view class="section__title">姓名:</view>  
+            <view class='form-group'>  
+                <input type="text" class="inpupt_withbottomline" name="username" value="{{companyInfo.username}}" placeholder="请输入姓名" />  
+            </view>      
+        </view> 
+        <view class="section">  
+            <view class="section__title">电话:</view>  
+            <view class='form-group'>  
+                <input type="text" class="inpupt_withbottomline" name="tel" value="{{companyInfo.tel}}" placeholder="请输入移动电话或者座机" />  
+            </view>      
+        </view> 
+        
+        <view class="section btn-area">  
+            <button loading="{{loading}}" formType="submit">提交</button>  
+            <button formType="reset">清空</button>  
+        </view>  
+    </form>  
+  
+     <!-- 黑框提示并消失 -->  
+    <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">  
+        {{notice_str}}  
+    </toast> 
+    
+    <!-- 确认框 及 提示框 -->  
+    <view class="page__bd">  
+        <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{modalHidden}}" mask bindconfirm="confirm_one" bindcancel="cancel_one">  
+            确认提交么？  
+        </modal>  
+        <modal class="modal" hidden="{{modalHidden2}}" no-cancel bindconfirm="modalChange2" bindcancel="modalChange2">  
+            <view> 提示 </view>  
+            <view> 清空成功 </view>  
+        </modal>  
+    </view>  
+</view>   
+  
+</view> 
+

@@ -12,11 +12,31 @@ var pageObject = {
     disabled: false,
     plain: false,
     loading: false,
-    postType: 0
+    toast1Hidden: true,
+    modalHidden: true,
+    modalHidden2: true,
+    notice_str: '',
+    postType: 0,
+    userInfo: null,
+    companyInfo: null,
   },
+  formSubmit: function (e) {
+    this.frm = e
+    if (e.detail.value.company.length == 0 || e.detail.value.username.length == 0 || e.detail.value.tel.length == 0) {
+      app.showToast('提示：用户名,姓名，电话都不能为空！', this, 2000);
+
+    } else {
+      this.modalTap();
+    }
+
+  },
+  formReset: function () {
+    console.log('form发生了reset事件');
+    this.modalTap2();
+  },   
   setDisabled: function (e) {
     this.setData({
-      disabled: !this.data.disabled
+      disabled: e
     })
   },
   setPlain: function (e) {
@@ -43,6 +63,22 @@ var pageObject = {
     }
     wx.setNavigationBarTitle({
       title: pageObject.data.title
+    })
+    var that = this
+    this.setDisabled(false);
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function (_userInfo) {
+      //更新数据
+      that.setData({
+        userInfo: _userInfo
+      })
+      app.getCompanyInfo(function (_companyInfo) {
+        //更新数据
+        that.setData({
+          companyInfo: _companyInfo
+        })
+        that.setDisabled(false);
+      })
     })
   }
 }
