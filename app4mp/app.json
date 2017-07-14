@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/detail/detail",
     "pages/index/search/search",
+    "pages/index/search/result",
     "pages/buy/buy",
     "pages/sell/sell",
     "pages/post/post",

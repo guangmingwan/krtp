@@ -12,7 +12,8 @@ var pageObject = {
     disabled: false,
     plain: false,
     loading: false,
-    searchtype: 0
+    searchtype: 0,
+    searchData: { "zhi_number": "1", "ingredients": "2", "color": "3", "color_number": "4", "method": "5", "weight": "6"}
   },
   setDisabled: function (e) {
     this.setData({
@@ -43,6 +44,44 @@ var pageObject = {
     }
     wx.setNavigationBarTitle({
       title: pageObject.data.title
+    })
+  },
+  reset: function(e) {
+    this.data.searchData = { "zhi_number": "", "ingredients": "", "color": "", "color_number": "", "method": "", "weight": "" }
+  },
+  search: function (e) {
+    var that = this;
+    var app = getApp();
+    var url = app.globalData.rooturl + '/post/search'
+    this.setLoading();
+    wx.request({
+      url: url,
+      data: this.data.searchData,
+      method: 'get',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        if (res.data.code == 200) {
+          that.setData({
+            loading: false,
+          })
+          if(res.data.posts.length >0) {
+            wx.navigateTo({
+              url: '/pages/index/search/result',
+            })
+          }
+        }
+        else {
+          that.setData({
+            loading: false,
+            modalHidden: true,
+            toast1Hidden: false,
+            notice_str: "没有找到记录",
+          });
+        }
+      }
     })
   }
 }

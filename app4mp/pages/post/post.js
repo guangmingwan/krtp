@@ -21,6 +21,9 @@ var pageObject = {
     companyInfo: null,
   },
   frm: null,
+  toast1Change: function (e) {
+    this.setData({ toast1Hidden: true });
+  },
   formSubmit: function (e) {
     this.frm = e
     this.confirm_one(e);
@@ -48,12 +51,26 @@ var pageObject = {
       },
       success: function (res) {
         console.log(res.data)
-        that.setData({
-          loading: false,
-          modalHidden: true,
-          toast1Hidden: false,
-          notice_str: '提交成功'
-        });
+        if(res.data.code == 200) {
+          that.setData({
+            loading: false,
+            modalHidden: true,
+            toast1Hidden: false,
+            notice_str: '提交成功'
+          });
+          setTimeout(function () {
+            that.setData({ toast1Hidden: true });
+            wx.navigateBack();
+          }, 3000)
+        }
+        else {
+          that.setData({
+            loading: false,
+            modalHidden: true,
+            toast1Hidden: false,
+            notice_str: "发生错误:" + JSON.stringify(res.data.errors),
+          });
+        }
       }
     })
 

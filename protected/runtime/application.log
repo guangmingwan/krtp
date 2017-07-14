@@ -4231,3 +4231,352 @@ Stack trace:
 REQUEST_URI=/index.php/profile/fetch?openid=orHwM0RxkpLbxTR8uzOqOY78IsXs
 HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
 ---
+2017/07/13 11:41:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "add" 动作.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('add')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/add')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/add?type=0
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/13 11:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "add" 动作.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('add')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/add')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/add?type=0
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/13 11:55:32 [error] [exception.CException] exception 'CException' with message 'Asset文件 "/Users/wanguangming/Desktop/myprojects/krtp/framework/zii/widgets/assets" 不存在.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/zii/widgets/CListView.php(217): CAssetManager->publish('/Users/wanguang...')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(147): CListView->init()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 /Users/wanguangming/Desktop/myprojects/krtp/protected/views/post/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(872): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(785): CController->renderPartial('index', Array, true)
+#8 /Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php(128): CController->render('index', Array)
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('')
+#19 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#20 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/
+---
+2017/07/13 11:55:51 [error] [exception.CException] exception 'CException' with message 'Asset文件 "/Users/wanguangming/Desktop/myprojects/krtp/framework/gii/assets" 不存在.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CAssetManager.php:257
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/gii/GiiModule.php(143): CAssetManager->publish('/Users/wanguang...')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CComponent.php(111): GiiModule->getAssetsUrl()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CModule.php(105): CComponent->__get('assetsUrl')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(215): COutputProcessor->run()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#11 /Users/wanguangming/Desktop/myprojects/krtp/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#12 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#13 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#14 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(787): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#15 /Users/wanguangming/Desktop/myprojects/krtp/framework/gii/controllers/DefaultController.php(47): CController->render('login', Array)
+#16 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/actions/CInlineAction.php(49): DefaultController->actionLogin()
+#17 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('login')
+#21 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#22 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#23 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php/gii/default/login
+---
+2017/07/13 11:56:12 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/Users/wanguangming/Desktop/myprojects/krtp/assets" 是无效的. 请确定它是一个可被 Web server process 写入资料的目录.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/Users/wanguang...')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/gii/GiiModule.php(143): CAssetManager->publish('/Users/wanguang...')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CComponent.php(111): GiiModule->getAssetsUrl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CModule.php(105): CComponent->__get('assetsUrl')
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#10 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#11 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(215): COutputProcessor->run()
+#12 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#13 /Users/wanguangming/Desktop/myprojects/krtp/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#14 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#15 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#16 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(787): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#17 /Users/wanguangming/Desktop/myprojects/krtp/framework/gii/controllers/DefaultController.php(47): CController->render('login', Array)
+#18 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/actions/CInlineAction.php(49): DefaultController->actionLogin()
+#19 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#21 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('login')
+#23 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/log...')
+#24 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#25 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php/gii/default/login
+---
+2017/07/13 11:58:44 [error] [exception.CException] exception 'CException' with message '别名 "bootstrap.components.TbApi" 无效。请确认它指向一个存在的PHP文件。' in /Users/wanguangming/Desktop/myprojects/krtp/framework/YiiBase.php:323
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/YiiBase.php(197): YiiBase::import('bootstrap.compo...', true)
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CModule.php(393): YiiBase::createComponent(Array)
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CModule.php(103): CModule->getComponent('bootstrap')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/protected/views/layouts/main.php(16): CModule->__get('bootstrap')
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(215): COutputProcessor->run()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#11 /Users/wanguangming/Desktop/myprojects/krtp/protected/views/layouts/column1.php(7): CBaseController->endContent()
+#12 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#13 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#14 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(787): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#15 /Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/SiteController.php(86): CController->render('login', Array)
+#16 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#17 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('login')
+#21 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#22 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#23 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php/site/login
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/14 15:33:14 [error] [exception.CException] exception 'CException' with message '别名 "bootstrap.components.TbApi" 无效。请确认它指向一个存在的PHP文件。' in /Users/wanguangming/Desktop/myprojects/krtp/framework/YiiBase.php:323
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/YiiBase.php(197): YiiBase::import('bootstrap.compo...', true)
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CModule.php(393): YiiBase::createComponent(Array)
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CModule.php(103): CModule->getComponent('bootstrap')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/protected/views/layouts/main.php(16): CModule->__get('bootstrap')
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div class="con...')
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div class="con...')
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(215): COutputProcessor->run()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#11 /Users/wanguangming/Desktop/myprojects/krtp/protected/views/layouts/column1.php(7): CBaseController->endContent()
+#12 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(126): require('/Users/wanguang...')
+#13 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/wanguang...', Array, true)
+#14 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(787): CBaseController->renderFile('/Users/wanguang...', Array, true)
+#15 /Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/SiteController.php(86): CController->render('login', Array)
+#16 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#17 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('login')
+#21 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#22 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#23 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php/site/login
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/14 15:34:20 [error] [exception.CException] exception 'CException' with message '属性 "Post.userid" 未被定义.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/db/ar/CActiveRecord.php(162): CComponent->__set('userid', 'orHwM0RxkpLbxTR...')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php(144): CActiveRecord->__set('userid', 'orHwM0RxkpLbxTR...')
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/actions/CInlineAction.php(49): PostController->actionAdd()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('add')
+#12 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/add')
+#13 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/post/add?type=0
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/14 17:24:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "search" 动作.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('search')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('search')
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/search')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/14 17:25:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "search" 动作.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('search')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('search')
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/search')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/14 17:25:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "search" 动作.' in /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php:486
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(270): CController->missingAction('search')
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): CController->run('search')
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController('post/search')
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+HTTP_REFERER=https://servicewechat.com/wxa4712ca802cf8f2a/devtools/page-frame.html
+---
+2017/07/14 17:29:30 [error] [php] Undefined index: zingredients (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:132)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+2017/07/14 17:29:50 [error] [php] Undefined index: zingredients (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:132)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+2017/07/14 17:30:50 [error] [php] Undefined index: start (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:140)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+2017/07/14 17:30:54 [error] [php] Undefined index: start (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:140)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+2017/07/14 17:30:55 [error] [php] Undefined index: start (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:140)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+2017/07/14 17:30:56 [error] [php] Undefined index: start (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:140)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+2017/07/14 17:30:56 [error] [php] Undefined index: start (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:140)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+2017/07/14 17:30:56 [error] [php] Undefined index: start (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:140)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6
+2017/07/14 17:30:56 [error] [php] Undefined index: start (/Users/wanguangming/Desktop/myprojects/krtp/protected/controllers/PostController.php:140)
+Stack trace:
+#0 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(134): PostController->runAction()
+#1 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#4 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CController.php(265): PostController->runActionWithFilters()
+#7 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(282): PostController->run()
+#8 /Users/wanguangming/Desktop/myprojects/krtp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/wanguangming/Desktop/myprojects/krtp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/wanguangming/Desktop/myprojects/krtp/index.php(11): CWebApplication->run()
+REQUEST_URI=/index.php/post/search?zhi_number=1&ingredients=2&color=3&color_number=4&method=5&weight=6

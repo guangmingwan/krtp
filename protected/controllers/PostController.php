@@ -28,7 +28,7 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','api_posts_count','api_posts'),
+				'actions'=>array('index','view','api_posts_count','api_posts','add','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -126,6 +126,51 @@ class PostController extends Controller
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
+	}
+    public function actionSearch() {
+        $s1= $_GET["zhi_number"];
+        $s2 = $_GET["ingredients"];
+        $s3 = $_GET["color"];
+        $s4 = $_GET["color_number"];
+        $s5 = $_GET["method"];
+        $s6 = $_GET["weight"];
+
+        $criteria = new CDbCriteria;
+
+        $start = intval(isset($_GET["start"]) ? $_GET["start"] : 0);
+        $count = intval(isset($_GET["count"]) ? $_GET["count"] : 5);
+
+        $criteria->limit = $count;    //取1条数据，如果小于0，则不作处理
+        $criteria->offset = $start;
+
+
+        $posts = Post::model()->findAll($criteria);
+
+        $result = array("code"=>200,"posts"=>$posts);
+        echo CJSON::encode($result);
+    }
+	public function actionAdd() {
+		$HTTP_RAW_POST_DATA = isset($GLOBALS['HTTP_RAW_POST_DATA']) ? $GLOBALS['HTTP_RAW_POST_DATA'] : "{}";
+		$post_data = array_merge($_GET,json_decode($HTTP_RAW_POST_DATA, true));
+		$user_openid = $post_data["openid"];
+
+		$user = User::model()->findByAttributes(array("username"=>$user_openid));
+		$companyInfo = json_decode($user->profile, true);
+
+
+		$postArray = $post_data["post"];
+
+		$post = new Post();
+		$post->setAttributes( $companyInfo);
+		$post->openid = $user_openid;
+		$post->setAttributes( $postArray);
+		if (!$post->save()) {
+			echo json_encode( array("code"=>500,"errors"=>$post->errors) );
+			die();
+		}
+
+		echo json_encode( array("code"=>200) );
+		die();
 	}
     public function actionApi_posts_count() {
         echo json_encode( array("code"=>200,"count" => Post::model()->find()->count()));

@@ -55,7 +55,6 @@ class Post extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
 			array('class, width, goods_weight, pi_number, pi_weight, weight, price', 'numerical', 'integerOnly'=>true),
 			array('openid, company, color, ingredients, method, gan_number, manufacture_date, band, jian_number, name, library, zhi_number, zhen_number, inch_number, total_zhen_number, face_pic, back_pic', 'length', 'max'=>255),
 			array('username, percent', 'length', 'max'=>50),
