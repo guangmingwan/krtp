@@ -25,7 +25,7 @@ Page({
     var searchtype = event.currentTarget.dataset.searchType
     console.log("searchtype:" + searchtype)
     wx.navigateTo({
-      url: '/pages/index/search/search?searchtype=' + searchtype
+      url: '/pages/search/search?searchtype=' + searchtype
     })
   },
   scroll: function (e) {

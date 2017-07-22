@@ -5,12 +5,14 @@
   </view>
 </block>
 <block wx:else>
-  <view class="container film-detail">
+  <view class="film-detail">
     <view class="film-item">
       <view class="film-image">
-        <image src="{{film.images.medium}}"></image>
+        <image src="{{film.face_pic}}"></image>
       </view>
+      
       <view class="film-info">
+        <block wx:if="{{film.post_type == '0'}}">
         <view>
           <text class="film-title">{{film.title}}</text>
           <text class="film-year">{{film.year}}</text>
@@ -58,12 +60,27 @@
             <text>{{film.wish_count}}</text>)
           </view>
         </view>
+        </block>
+        <block wx:else>
+          <view class="collect-wish">
+          <view>
+            看过(
+            <text>{{film.collect_count}}</text>)
+          </view>
+          <view>
+            想看(
+            <text>{{film.wish_count}}</text>)
+          </view>
+        </view>
+        </block>
       </view>
+      
     </view>
+   
     <view class="summary">
-      <text class="title">剧情简介</text>
+      <text class="title">备注</text>
       <view class="content">
-        {{film.summary}}
+        {{film.notes}}
       </view>
     </view>
   </view>

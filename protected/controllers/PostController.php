@@ -28,7 +28,7 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','api_posts_count','api_posts','add','search'),
+				'actions'=>array('index','view','api_posts_count','api_posts','add','search',"load"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -127,15 +127,63 @@ class PostController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
+	public function actionLoad($id) {
+	    $post = Post::model()->findByPk($id);
+        $result = array("code"=>200,"post"=>$post);
+        echo CJSON::encode($result);
+    }
     public function actionSearch() {
-        $s1= $_GET["zhi_number"];
-        $s2 = $_GET["ingredients"];
-        $s3 = $_GET["color"];
-        $s4 = $_GET["color_number"];
-        $s5 = $_GET["method"];
-        $s6 = $_GET["weight"];
+	    $post_type = $_GET["type"];
+        $name= $_GET["name"];
+        $library= $_GET["library"];
+        $zhi_number= $_GET["zhi_number"];
+        $zhen_number= $_GET["zhen_number"];
+        $ingredients = $_GET["ingredients"];
+        $color = $_GET["color"];
+        $color_number = $_GET["color_number"];
+        $method = $_GET["method"];
+        $weight = $_GET["weight"];
+        $width= $_GET["width"];
+        $notes= $_GET["notes"];
 
         $criteria = new CDbCriteria;
+        $criteria->addCondition("post_type = $post_type");
+        if(!empty($sname)) {
+            $criteria->addSearchCondition("name", $name);
+        }
+        if(!empty($library)) {
+            $criteria->addSearchCondition("library", $library);
+        }
+        if(!empty($zhi_number)) {
+            $criteria->addSearchCondition("zhi_number", $zhi_number);
+        }
+        if(!empty($zhen_number)) {
+            $criteria->addSearchCondition("zhen_number", $zhen_number);
+        }
+        if(!empty($ingredients)) {
+            $criteria->addSearchCondition("ingredients", $ingredients);
+        }
+        if(!empty($color)) {
+            $criteria->addSearchCondition("color", $color);
+        }
+        if(!empty($color_number)) {
+            $criteria->addSearchCondition("color_number", $color_number);
+        }
+        if(!empty($method)) {
+            $criteria->addSearchCondition("method", $method);
+        }
+        if(!empty($weight)) {
+            $criteria->addSearchCondition("weight", $weight);
+        }
+        if(!empty($goods_weight)) {
+            $criteria->addSearchCondition("goods_weight", $goods_weight);
+        }
+        if(!empty($width)) {
+            $criteria->addSearchCondition("width", $width);
+        }
+        if(!empty($notes)) {
+            $criteria->addSearchCondition("notes", $notes);
+        }
 
         $start = intval(isset($_GET["start"]) ? $_GET["start"] : 0);
         $count = intval(isset($_GET["count"]) ? $_GET["count"] : 5);
@@ -159,8 +207,10 @@ class PostController extends Controller
 
 
 		$postArray = $post_data["post"];
+		$posttype = $_GET["type"];
 
 		$post = new Post();
+        $post->post_type = $posttype;
 		$post->setAttributes( $companyInfo);
 		$post->openid = $user_openid;
 		$post->setAttributes( $postArray);

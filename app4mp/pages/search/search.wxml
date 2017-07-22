@@ -1,0 +1,128 @@
+<!--pages/index/search/search.wxml-->
+<view class="title">
+      <text>{{sub_title}}</text>  
+  </view>
+<view class="container">
+
+<block wx:if="{{searchtype == 0}}">
+<view class="film-item">
+  <view class="film-image">
+  <text>支数：</text>
+  </view>
+  <view class="film-info">
+  <input data-id="0" bindinput="searchDataChange" name="zhi_number"   value="{{searchData.zhi_number}}"  class="inpupt_withbottomline" maxlength="10" placeholder="输入支数" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>成份：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="1" bindinput="searchDataChange" name="ingredients"  value="{{searchData.ingredients}}"  class="inpupt_withbottomline" maxlength="10" placeholder="输入成份" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>颜色：</text>
+  </view>
+  <view class="film-info">
+  <input data-id="2"  bindinput="searchDataChange" name="color"  value="{{searchData.color}}"  class="inpupt_withbottomline" maxlength="10" placeholder="输入颜色" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>色号：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="3" bindinput="searchDataChange" name="color_number"  value="{{searchData.color_number}}"  class="inpupt_withbottomline" maxlength="10" placeholder="输入色号" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>纺法：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="4" bindinput="searchDataChange" name="method"  value="{{searchData.method}}" class="inpupt_withbottomline"  maxlength="10" placeholder="输入纺法" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>数量：</text>
+  </view>
+  <view class="film-info">
+  <input data-id="5"  bindinput="searchDataChange" name="weight"  value="{{searchData.weight}}"  class="inpupt_withbottomline" maxlength="10" placeholder="输入数量（公斤）以上" />
+  </view>
+</view>
+
+</block>
+<block wx:else>
+
+<view class="film-item">
+  <view class="film-image">
+  <text>布纱名称：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="0" bindinput="searchDataChange" name="name" value="{{searchData.name}}"   class="inpupt_withbottomline" maxlength="10" placeholder="布纱名称" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>用纱：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="1" bindinput="searchDataChange" name="library" value="{{searchData.library}}"   class="inpupt_withbottomline" maxlength="10" placeholder="输入用纱" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>针数：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="2" bindinput="searchDataChange"  name="zhen_number" value="{{searchData.zhen_number}}" class="inpupt_withbottomline" maxlength="10" placeholder="输入针数" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>成品封度：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="3" name="width"  bindinput="searchDataChange" value="{{searchData.width}}"  class="inpupt_withbottomline" maxlength="10" placeholder="成品封度" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>成品克重：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="4" name="goods_weight" bindinput="searchDataChange" value="{{searchData.goods_weight}}"  class="inpupt_withbottomline"  maxlength="10" placeholder="输入纺法" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>数量：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="5" name="weight" bindinput="searchDataChange" value="{{searchData.weight}}"  class="inpupt_withbottomline" maxlength="10" placeholder="输入数量（公斤）以上" />
+  </view>
+</view>
+<view class="film-item">
+  <view class="film-image">
+  <text>备注：</text>
+  </view>
+  <view class="film-info">
+  <input  data-id="6" name="notes"  bindinput="searchDataChange"  value="{{searchData.notes}}"  class="inpupt_withbottomline" maxlength="10" placeholder="输入备注" />
+  </view>
+</view>
+
+</block>
+ <!-- 黑框提示并消失 -->  
+    <toast hidden="{{toast1Hidden}}" bindchange="toast1Change">  
+        {{notice_str}}  
+    </toast> 
+<view class="film-item">
+  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="search" hover-class="other-button-hover"><icon type="search" size="15"/> 确定 </button>
+  <button type="default" size="{{defaultSize}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="reset" hover-class="other-button-hover">取消|清除条件 </button>
+  </view>
+</view>

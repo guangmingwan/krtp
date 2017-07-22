@@ -1,5 +1,5 @@
 //index.js
-var functions = require('../../functions.js')
+// var functions = require('../../functions.js')
 //var url = 'https://www.17tex.com/krtp/index.php/post/api_posts'
 var app = getApp();
 var url = app.globalData.rooturl + '/post/api_posts'
@@ -24,22 +24,29 @@ Page({
   scroll: function (e) {
     //console.log(e)
   },
-  onLoad: function () {
-    var that = this
+  onLoad: function (options) {
+    var app = getApp();
+    this.setData({
+      showLoading: false,
+      films: app.globalData.searchResult.posts,
+      postcount: app.globalData.searchResult.posts.length
+    })
+    console.log("found record:" + app.globalData.searchResult.posts.length)
+    //var that = this
     // this.setData({
     //   showLoading: false
     // })
-    var api_url = app.globalData.rooturl + '/post/api_posts_count';
-    functions.getPostCount.call(that, api_url, function (data) {
-      that.setData({
-        showLoading: false
-      })
-    })
-    functions.fetchFilms.call(that, url, 0, pageSize, function (data) {
-      that.setData({
-        showLoading: false
-      })
-    })
+    // var api_url = app.globalData.rooturl + '/post/api_posts_count';
+    // functions.getPostCount.call(that, api_url, function (data) {
+    //   that.setData({
+    //     showLoading: false
+    //   })
+    // })
+    // functions.fetchFilms.call(that, url, 0, pageSize, function (data) {
+    //   that.setData({
+    //     showLoading: false
+    //   })
+    // })
 
 
   },
