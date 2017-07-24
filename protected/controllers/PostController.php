@@ -28,7 +28,7 @@ class PostController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','api_posts_count','api_posts','add','search',"load"),
+				'actions'=>array('index','view','api_posts','add','search',"load"),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -191,10 +191,10 @@ class PostController extends Controller
         $criteria->limit = $count;    //取1条数据，如果小于0，则不作处理
         $criteria->offset = $start;
 
-
+        $count =  Post::model()->count($criteria);
         $posts = Post::model()->findAll($criteria);
 
-        $result = array("code"=>200,"posts"=>$posts);
+        $result = array("code"=>200,"posts"=>$posts,"count"=>$count);
         echo CJSON::encode($result);
     }
 	public function actionAdd() {
@@ -222,9 +222,7 @@ class PostController extends Controller
 		echo json_encode( array("code"=>200) );
 		die();
 	}
-    public function actionApi_posts_count() {
-        echo json_encode( array("code"=>200,"count" => Post::model()->find()->count()));
-    }
+
     public function actionApi_posts() {
         $criteria = new CDbCriteria;
 
@@ -237,7 +235,7 @@ class PostController extends Controller
 
         $posts = Post::model()->findAll($criteria);
 
-        $result = array("subjects"=>$posts);
+        $result = array("subjects"=>$posts,"count"=> Post::model()->find()->count());
         echo CJSON::encode($result);
     }
 	/**
