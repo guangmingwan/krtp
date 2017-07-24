@@ -45,27 +45,10 @@ module.exports = {
         } else {
           that.setData({
             films: that.data.films.concat(data.subjects),
+            postcount: data.count,
             start: that.data.start + data.subjects.length
           })
         }
-        cb(data)
-      }
-    })
-  },
-  getPostCount: function (url, cb) {
-    var that = this
-    wx.request({
-      url: url ,
-      header: {
-        "Content-Type": "json",
-      },
-      success: function (res) {
-        var data = res.data
-        if (data.code === 200) {
-          that.setData({
-            postcount: data.count,
-          })
-        } 
         cb(data)
       }
     })

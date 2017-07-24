@@ -142,7 +142,10 @@ page {
 .other-button-hover {
   background-color: blue;
 }
-
+.summary {
+  width:90%;
+  margin-bottom:60px;
+}
 button {
   margin: 20px;
 }

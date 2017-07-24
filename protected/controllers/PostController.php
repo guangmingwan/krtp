@@ -147,8 +147,9 @@ class PostController extends Controller
         $notes= $_GET["notes"];
 
         $criteria = new CDbCriteria;
+
         $criteria->addCondition("post_type = $post_type");
-        if(!empty($sname)) {
+        if(!empty($name)) {
             $criteria->addSearchCondition("name", $name);
         }
         if(!empty($library)) {
@@ -184,6 +185,8 @@ class PostController extends Controller
         if(!empty($notes)) {
             $criteria->addSearchCondition("notes", $notes);
         }
+
+
 
         $start = intval(isset($_GET["start"]) ? $_GET["start"] : 0);
         $count = intval(isset($_GET["count"]) ? $_GET["count"] : 5);

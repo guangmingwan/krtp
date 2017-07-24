@@ -5,13 +5,13 @@
   </view>
 </block>
 <block wx:else>
-  <view class="film-detail">
+  <view class="container">
     <view class="film-item">
       
 
       <view class="film-info">
       <view class="film-item">
-        <image src="{{film.face_pic}}"></image>
+        <image src="{{film.face_pic? film.face_pic : '/images/logo.png'}}"></image>
       </view>
         <block wx:if="{{film.post_type == '0'}}">
           <view class="film-item">
@@ -80,7 +80,7 @@
           </view>
           <view class="film-item">
             <view class="film-image">
-              <text>库存数量：</text>
+              <text>库存(KG）：</text>
             </view>
             <view class="film-info">
               <input value="{{film.weight}}" class="inpupt_withbottomline" maxlength="10" />
@@ -95,6 +95,7 @@
             </view>
           </view>
         </block>
+
         <block wx:else>
           <view class="film-item">
             <view class="film-image">
@@ -146,7 +147,7 @@
           </view>
           <view class="film-item">
             <view class="film-image">
-              <text>库存数量：</text>
+              <text>库存（KG）：</text>
             </view>
             <view class="film-info">
               <input value="{{film.weight}}" class="inpupt_withbottomline" maxlength="10"  />
@@ -154,7 +155,7 @@
           </view>
           <view class="film-item">
             <view class="film-image">
-              <text>销售单价：</text>
+              <text>销售单价,元／公斤（不含税）：</text>
             </view>
             <view class="film-info">
               <input value="{{film.price}}" class="inpupt_withbottomline" maxlength="10" placeholder="元／公斤（不含税）" />

@@ -29,7 +29,7 @@ Page({
     this.setData({
       showLoading: false,
       films: app.globalData.searchResult.posts,
-      postcount: app.globalData.searchResult.posts.length
+      postcount: app.globalData.searchResult.count
     })
 
     if (app.globalData.searchResult.posts.length < pageSize) {
