@@ -51,6 +51,7 @@
               <text class="label">暂无报价</text>
             </block>
           </view>
+          
           <view class="directors">
             <text class="label">卖方</text>
             <text class="person">{{film.company}}</text>

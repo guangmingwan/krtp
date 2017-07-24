@@ -23,6 +23,8 @@ Page({
     console.log('onPullDownRefresh', new Date())
     this.setData({
       refresh: true,
+      films: [],
+      start: 0
     })
     
     this.reload();
