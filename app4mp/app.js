@@ -61,8 +61,8 @@ App({
     companyInfo:null,
     appid: 'wxa4712ca802cf8f2a',//填写微信小程序appid  
     secret: 'c9cf9130c42c586184b8cd9f2e62caae',//填写微信小程序secret
-    rooturl: 'http://127.0.0.1:8888/index.php', 
-    //rooturl: 'https://www.17tex.com/krtp/index.php',
+    //rooturl: 'http://127.0.0.1:8888/index.php', 
+    rooturl: 'https://www.17tex.com/krtp/index.php',
   },
   //自定义Toast   
   showToast: function(text,o,count){

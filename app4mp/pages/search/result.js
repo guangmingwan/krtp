@@ -31,6 +31,12 @@ Page({
       films: app.globalData.searchResult.posts,
       postcount: app.globalData.searchResult.posts.length
     })
+
+    if (app.globalData.searchResult.posts.length < pageSize) {
+      this.setData({
+        hasMore: false
+      })
+    }
     console.log("found record:" + app.globalData.searchResult.posts.length)
     //var that = this
     // this.setData({

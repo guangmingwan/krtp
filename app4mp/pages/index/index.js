@@ -55,6 +55,12 @@ Page({
     this.setData({
       hasMore: false
     })
+   
+    functions.fetchFilms.call(that, url, that.data.start, pageSize, function (data) {
+      that.setData({
+        showLoading: false
+      })
+    })
     // functions.getCity(function (city) {
     //   functions.fetchFilms.call(that, url, city, that.data.start, pageSize, function (data) { })
     // })
