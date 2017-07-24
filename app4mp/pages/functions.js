@@ -38,6 +38,10 @@ module.exports = {
       },
       success: function (res) {
         var data = res.data
+        that.setData({
+          showLoading: false,
+          refresh: false
+        })
         if (data.subjects.length === 0) {
           that.setData({
             hasMore: false,

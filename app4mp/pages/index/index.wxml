@@ -6,7 +6,20 @@
   </view>
 </block>
 <block wx:else>
-<view class="home-logo-view" >
+
+<view class="load-more-wrap">
+      <block wx:if="{{refresh}}">
+        <view class="load-content">
+          <text class="weui-loading"/><text class="loading-text">正在刷新</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="load-content">
+          <text></text>
+        </view>
+      </block>
+    </view>
+<view class="home-logo-view" bindscrolltoupper="refesh">
           <image class="logo-image" src="/images/logo.png"></image>
           <view>
           <text class="site-tips-label">本系统共收录余料资源<text class="highlight">{{postcount}}</text>件</text>

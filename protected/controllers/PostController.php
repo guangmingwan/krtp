@@ -235,6 +235,7 @@ class PostController extends Controller
         $criteria->limit = $count;    //取1条数据，如果小于0，则不作处理
         $criteria->offset = $start;
 
+        $criteria->order = 'id DESC';
 
         $posts = Post::model()->findAll($criteria);
 

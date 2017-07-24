@@ -10,6 +10,7 @@ Page({
     postcount: 0,
     hasMore: true,
     showLoading: true,
+    refresh: false,
     start: 0,
     defaultSize: 'default',
     primarySize: 'default',
@@ -20,6 +21,11 @@ Page({
   },
   onPullDownRefresh: function () {
     console.log('onPullDownRefresh', new Date())
+    this.setData({
+      refresh: true,
+    })
+    
+    this.reload();
   },
   gotoSearch: function (event) {
     var searchtype = event.currentTarget.dataset.searchType
@@ -31,19 +37,21 @@ Page({
   scroll: function (e) {
     //console.log(e)
   },
+  reload: function (e) {
+    var that = this;
+    var api_url = app.globalData.rooturl + '/post/api_posts_count';
+
+    functions.fetchFilms.call(that, url, 0, pageSize, function (data) {
+
+    })
+
+  },
   onLoad: function () {
     var that = this
         // this.setData({
         //   showLoading: false
         // })
-    var api_url = app.globalData.rooturl + '/post/api_posts_count';
-        
-      functions.fetchFilms.call(that, url,  0, pageSize, function (data) {
-        that.setData({
-          showLoading: false
-        })
-      })
-      
+    this.reload();
     
   },
   scrolltolower: function () {
