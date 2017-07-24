@@ -4,7 +4,6 @@
   </view>
 <view class="container">
 <form bindsubmit="formSubmit" bindreset="formReset"> 
-<block wx:if="{{postType == '0'}}">
 <view class="film-item">
   <view class="film-image">
   <text>供应商编号：</text>
@@ -37,6 +36,8 @@
   <input  disabled="true"  class="inpupt_withnobottomline" maxlength="10" placeholder="输入联系人电话" value="{{companyInfo.tel}}" />
   </view>
 </view>
+<block wx:if="{{postType == '0'}}">
+
 <view class="film-item">
   <view class="film-image">
   <text>支数：</text>

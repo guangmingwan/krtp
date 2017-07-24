@@ -16,6 +16,7 @@ var pageObject = {
     search0Key: ["zhi_number", "ingredients", "color", "color_number", "method", "weight"],
     search1Key: ["name", "library", "zhen_number", "width", "goods_weight", "weight", "notes"],
     searchData: { "name": "", "library": "", "zhi_number": "", "zhen_number": "", "ingredients": "", "color": "", "color_number": "", "method": "", "goods_weight": "", "weight": "", "width": "", "notes": "" },
+    searchDataO: {},
     toast1Hidden: true,
     modalHidden: true,
     loading: false,
@@ -54,7 +55,8 @@ var pageObject = {
   },
   onLoad: function (options) {
     this.setData({
-      searchtype: options.searchtype
+      searchtype: options.searchtype,
+      searchDataO: this.data.searchData
     })
     switch (options.searchtype) {
       case "0":
@@ -69,7 +71,10 @@ var pageObject = {
     })
   },
   reset: function(e) {
-    this.data.searchData = { "zhi_number": "", "ingredients": "", "color": "", "color_number": "", "method": "", "weight": "" }
+    this.setData({
+      searchData: this.data.searchDataO
+    })
+    
   },
   search: function (e) {
     var that = this;

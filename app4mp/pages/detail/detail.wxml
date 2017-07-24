@@ -23,7 +23,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>纺法：</text>
             </view>
             <view class="film-info">
@@ -31,7 +31,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>成份：</text>
             </view>
             <view class="film-info">
@@ -39,7 +39,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>牌子／产地：</text>
             </view>
             <view class="film-info">
@@ -47,7 +47,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>颜色／色号：</text>
             </view>
             <view class="film-info">
@@ -55,15 +55,15 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>批号／缸号：</text>
             </view>
-            <view class="film-info">
+            <view class="film-item">
               <input value="{{film.gan_number}}" class="inpupt_withbottomline" maxlength="10" />
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>生产日期：</text>
             </view>
             <view class="film-info">
@@ -71,7 +71,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>库存件数：</text>
             </view>
             <view class="film-info">
@@ -79,7 +79,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>库存(KG）：</text>
             </view>
             <view class="film-info">
@@ -87,7 +87,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>销售单价,元／公斤（不含税）：</text>
             </view>
             <view class="film-info">
@@ -98,7 +98,7 @@
 
         <block wx:else>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>布种：</text>
             </view>
             <view class="film-info">
@@ -106,7 +106,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>用纱：</text>
             </view>
             <view class="film-info">
@@ -114,7 +114,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>针数：</text>
             </view>
             <view class="film-info">
@@ -122,7 +122,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>寸数：</text>
             </view>
             <view class="film-info">
@@ -130,7 +130,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>总针数：</text>
             </view>
             <view class="film-info">
@@ -138,7 +138,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>成品克重：</text>
             </view>
             <view class="film-info">
@@ -146,7 +146,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>库存（KG）：</text>
             </view>
             <view class="film-info">
@@ -154,7 +154,7 @@
             </view>
           </view>
           <view class="film-item">
-            <view class="film-image">
+            <view class="film-item">
               <text>销售单价,元／公斤（不含税）：</text>
             </view>
             <view class="film-info">

@@ -65,8 +65,17 @@ class Post extends CActiveRecord
 			array('id, openid, company, username, tel, color, ingredients, method, gan_number, manufacture_date, band, jian_number, class, name, library, percent, zhi_number, zhen_number, inch_number, total_zhen_number, width, goods_weight, pi_number, pi_weight, weight, price, face_pic, back_pic, notes, created_at, updated_at, deleted_at', 'safe', 'on'=>'search'),
 		);
 	}
-
-	/**
+// 添加时间戳
+    public function behaviors()
+    {
+        return array(
+            'CTimestampBehavior'=>array(
+                'class' => 'zii.behaviors.CTimestampBehavior',
+                'updateAttribute' => null,
+                'createAttribute' => 'created_at')
+        );
+    }
+    /**
 	 * @return array relational rules.
 	 */
 	public function relations()
