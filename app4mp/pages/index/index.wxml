@@ -18,6 +18,7 @@
           <text></text>
         </view>
       </block>
+
     </view>
 <view class="home-logo-view" bindscrolltoupper="refesh">
           <image class="logo-image" src="/images/logo.png"></image>
@@ -36,6 +37,7 @@
           <image src="{{film.face_pic? film.face_pic : '/images/logo.png'}}"></image>
         </view>
         <view class="film-info">
+        <block wx:if="{{film.post_type == '0'}}">
           <view>
             <text class="film-title">{{film.name}}</text>
             <text class="film-year">{{film.color}}</text>
@@ -57,6 +59,31 @@
             <text class="label">牌子／产地</text>
             <text class="person">{{film.band?film.band:"不详"}}</text>
           </view>
+          </block>
+          <block wx:else>
+
+           <view>
+            <text class="film-title">{{film.name}}</text>
+            <text class="film-year">{{film.library}}</text>
+          </view>
+          <view class="film-rating">
+            <block wx:if="{{film.price > 0}}">
+              <text class="label">单价(不含税)</text>
+              <text class="rating">￥{{film.price}}</text>
+            </block>
+            <block wx:else>
+              <text class="label">暂无报价</text>
+            </block>
+          </view>
+          <view class="directors">
+            <text class="label">卖方</text>
+            <text class="person">{{film.company}}</text>
+          </view>
+          <view class="directors">
+            <text class="label">牌子／产地</text>
+            <text class="person">{{film.band?film.band:"不详"}}</text>
+          </view>
+           </block>
           <view class="casts">
             <text class="label">备注</text>
             <text class="person">{{film.notes}}</text>
